@@ -10,6 +10,7 @@ function run() {
 
   // 2) Upload files
   const s3Uri = `s3://${bucket}`;
+  const s3Url = `s3://${bucket}`;
   exec.exec(`aws s3 sync ${distFolder} ${s3Uri} --region ${bucketRegion}`);
 
   const websiteUrl = `http://${bucket}.s3-website-${bucketRegion}.amazonaws.com`;
