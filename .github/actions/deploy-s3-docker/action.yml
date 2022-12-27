@@ -1,5 +1,9 @@
 name: 'Upload to AWS S3 using Docker'
 description: 'Upload using docker action'
+on:
+  push:
+    branches:
+      - 'daily/**'
 inputs:
   bucket:
     description: 'S3 bucket name'
@@ -15,4 +19,4 @@ outputs:
     description: 'the url of deployed website'
 runs:
   using: 'docker'
-  image: 'Dcokerfile'
+  image: 'Dokerfile'
